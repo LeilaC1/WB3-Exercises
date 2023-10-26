@@ -1,10 +1,6 @@
 "use strict";
 
 
-
-
-
-
 function getSupplier (partCode){
   let posOfColon = partCode.indexOf(":");
   let productSupplier = partCode.substring(0, posOfColon);
