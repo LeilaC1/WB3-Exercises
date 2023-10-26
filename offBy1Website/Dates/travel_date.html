@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Date</title>
+</head>
+<body>
+    <main>
+        <div>
+        <label for="inputDate"> Travel Date:</label>
+    </div>
+    <div>
+        <input type="date" id="inputDate">
+        <button id="button">Submit</button>
+    </div>
+        <p id="answer"></p>
+
+
+
+    </main>
+
+
+
+
+
+
+<script>
+    "use strict";
+
+window.onload = init;
+
+function init(){
+    const button = document.getElementById("button");
+    button.onclick = onButtonClicked;
+}
+
+
+function onButtonClicked(){
+    const inputDate = document.getElementById("inputDate").value;
+    let date = new Date(inputDate);
+    let currentDate = new Date();
+
+    let time = Math.abs(date - currentDate);
+let days = Math.ceil(time / (1000 * 60 * 60 * 24));
+
+let answer = document.getElementById("answer");
+
+  // display
+    if (days === 0){
+        answer.innerHTML = `Today!`
+    }
+    else if (days === 1) {
+        answer.innerHTML = `Your trip is in 1 day`;
+
+    } else if (days > 1){ 
+        answer.innerHTML = ` Your trip is in ${days} days `
+    
+    }
+}
+
+</script>
+</body>
+</html>
