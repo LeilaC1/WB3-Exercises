@@ -1,0 +1,21 @@
+<html>
+<head>
+ <title>Anonymous Functions</title>
+</head>
+<body>
+ <input id="helloBtn" type="button" value="Say Hello" />
+ <script>
+"use strict";
+window.onload = function() {
+ const btn = document.getElementById("helloBtn");
+ btn.onclick = sayHello;
+};
+function sayHello() {
+ alert("Hello!");
+}
+
+ </script>
+</body>
+</html>
+
+<!-- I think using the anonymus function is much easier but assigning all our event handlers using init would be more efficient and less prone to bugs and overall more reliable-->
