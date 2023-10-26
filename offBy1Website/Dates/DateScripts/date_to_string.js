@@ -10,5 +10,5 @@ console.log(`toDateString = ${currentDate.toDateString()}`);
 
 console.log(`toUTCString = ${currentDate.toUTCString()}`);
 
-console.log(`toLocaleString = ${currentDate.toLocaleString()}`)
+console.log(`toLocaleString = ${currentDate.toLocaleString()}`);
 
