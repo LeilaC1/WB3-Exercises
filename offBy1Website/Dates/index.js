@@ -10,8 +10,7 @@ function init(){
 
 function onButtonClicked(){
     const inputDate = document.getElementById("inputDate").value;
-    let objectDate = Date(inputDate);
-    let date = objectDate.toString();
+    let date = Date(inputDate.toString());
 
     // display
     let outputDisplay = document.getElementById("outputDisplay");
